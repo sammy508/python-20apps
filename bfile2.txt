@@ -1,1 +1,1 @@
-It will be written in file B
+it will be written in file oneIt will be written in file BIt was written in file C
