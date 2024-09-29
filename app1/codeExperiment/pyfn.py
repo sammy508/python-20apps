@@ -1,10 +1,10 @@
 # Here the glob function is use to 
 
-# Understanding Python's glob Module
-
-# The glob module in Python is used for file path pattern matching.
-#    It allows you to search for files with specific patterns, similar to how you would use wildcards in Unix or Linux shell commands. The module provides a way to perform file operations
-#    without having to loop through directories manually.
+#The glob module uses the os.scandir() 
+# and fnmatch.fnmatch() functions to match file patterns. 
+# It supports wildcards such as * (matches any number of characters), ? 
+# (matches a single character), and character ranges like [a-z]. For example, glob.glob('*.txt')
+#  will match all files ending with .txt.
 
 import glob
 
@@ -13,3 +13,5 @@ myfiles = glob.glob("journal/*.txt")
 for filepath in myfiles:
     with open (filepath, 'r') as file:
         print(file.read())
+
+

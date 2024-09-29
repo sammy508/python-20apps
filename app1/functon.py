@@ -18,3 +18,6 @@ def write_todos(filepath,todos_arg):
             file.writelines(todos_arg)      # this function doesn't return anything
 
 
+if __name__ == "__main__" :
+     print("hello")
+     print(get_todos)
