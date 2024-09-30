@@ -1,8 +1,9 @@
 # 
 
  # Functions blueprint
+Filepath = "todos.txt"
 
-def get_todos(filepath):
+def get_todos(filepath = Filepath):
     try:
         with open(filepath, 'r') as file_read:
             todosread = file_read.readlines()
