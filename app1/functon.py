@@ -14,7 +14,7 @@ def get_todos(filepath = Filepath):
 
 
 
-def write_todos(filepath,todos_arg):
+def write_todos(todos_arg,filepath=Filepath):
        with open(filepath, 'w') as file:
             file.writelines(todos_arg)      # this function doesn't return anything
 
