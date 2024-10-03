@@ -23,8 +23,8 @@ while True:
 
         todos = functon.get_todos("todos.txt")
         todos.append(todo)
+        functon.write_todos(todos, "todos.txt")
 
-        functon.write_todos("todos.txt", todos)
 
     elif user_action.startswith("show"):
         todos = functon.get_todos("todos.txt")
@@ -46,9 +46,9 @@ while True:
                 print("Invalid todo number.")
             else:
                 new_todo = input('Enter new todo: ')
-                todos[number] = new_todo + '\n'
+                todos[number] = new_todo 
 
-                functon.write_todos("todos.txt", todos)
+                functon.write_todos(todos, "todos.txt")
 
         except ValueError:
             print("Your command isn't valid.")
@@ -65,7 +65,7 @@ while True:
                 todo_to_remove = todos[number].strip('\n')
                 todos.pop(number)
 
-                functon.write_todos("todos.txt", todos)
+                functon.write_todos(todos, "todos.txt")
 
                 message = f"Todo '{todo_to_remove}' was removed from the list."
                 print(message)

@@ -1,12 +1,13 @@
-# 
+# # 
 
- # Functions blueprint
+#  # Functions blueprint
 Filepath = "todos.txt"
 
 def get_todos(filepath = Filepath):
     try:
         with open(filepath, 'r') as file_read:
             todosread = file_read.readlines()
+            
         return todosread
     except FileNotFoundError:
         return []  # Return an empty list if the file doesn't exist
@@ -22,3 +23,14 @@ def write_todos(todos_arg,filepath=Filepath):
 if __name__ == "__main__" :
      print("hello")
      print(get_todos)
+
+# # function.py
+
+# def get_todos(filepath=Filepath):
+#     try:
+#         with open(filepath, 'r') as file_read:
+#             todosread = [line.strip() for line in file_read.readlines()]
+#         return todosread
+#     except FileNotFoundError:
+#         return []  # Return an empty list if the file doesn't exist
+
