@@ -1,10 +1,7 @@
 eins
-two
-three
-asdd
+zwei
 drei
-fear
+feur
 funf
-sches
-seben
-
+sces
+scheben
