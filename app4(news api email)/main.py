@@ -1,4 +1,5 @@
 import requests
+from send_email import send_email
 
 api_key ="872930a61522403288309122e0c82b84"
 url = "https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=872930a61522403288309122e0c82b84"
@@ -6,8 +7,13 @@ url = "https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=872930a615
 request = requests.get(url)
 content= request.json()
 
+body = ""
 for article in content['articles']:
-    print()
-    print(article['title'])
-    
-    print(article['description'])
+
+    if article['title'] is not None:
+        body = body + article['title']+ article['description'] + 2*"\n"
+
+body = body.encode("utf-8")
+send_email(message=body)        
+   
+
