@@ -18,3 +18,9 @@ def about(station, date):
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+
+
+
+
+    # Python flask doesn't go well so skip that part
